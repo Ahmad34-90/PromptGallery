@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def gallery(request):
     return render (request, "gallery/gallery.html")
+
+def explore(request):
+    return render (request, "gallery/explore.html")

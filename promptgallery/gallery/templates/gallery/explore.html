@@ -1,0 +1,12 @@
+{% extends "gallery/base.html" %}
+{% block content %}
+<div class="item-center pt-12 p-5">
+    <h1 class="text-4xl font-bold">Explore Prompts</h1>
+    <p class="text-2xl m-5">Discover curated AI prompts for all your creative needs</p>
+    <form action="/search/" method="POST">
+        {% csrf_token %}
+        <input type="search" name="search_prompts" placeholder="Search Prompts.." style="border-radius: 10px;" class="text-2xl m-5 p-2 bg-gray-100">
+    </form>
+</div>
+<div>
+{% endblock content %}

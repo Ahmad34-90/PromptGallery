@@ -1,13 +1,83 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Django Tailwind</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
-<body>
-    <h1 class="bg-amber-300 text-2xl">hello tailwinds</h1>
-</body>
-</html>
+{% extends "gallery/base.html" %}
+{% load static %}
+{% block content %}
+ <div class="h-screen sm:h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4"
+     style="background-image: url('{% static "img/background.jpg" %}');">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 drop-shadow-lg">Welcome to Prompt_Gallery</h1>
+        <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-900  max-w-3xl drop-shadow">Browse thousands of curated AI prompts for ChatGPT, Midjourney, Stable Diffusion, and more. Save time and create better content.</p>
+    </div>
+     <div class="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 pt-10">
+        <h2 class="text-2xl sm:text-3xl font-semibold">Featured Categories</h2>
+        <a class="text-lg sm:text-xl text-gray-500 hover:text-gray-900 hover:underline mt-3 sm:mt-0 hover:-translate-y-1"href="{% url 'explore' %}">View all</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 place-items-center px-5">
+            <div class="border-2 border-gray-500 bg-gray-900 text-blue-50 p-8 rounded-2xl w-full text-center">
+                <p class="text-3xl font-semibold">AI</p>
+            </div>
+            <div class="border-2 border-gray-500 bg-gray-900 text-blue-50 p-8 rounded-2xl w-full text-center">
+                <p class="text-3xl font-semibold">Writing</p>
+            </div>
+            <div class="border-2 border-gray-500 bg-gray-900 text-blue-50 p-8 rounded-2xl w-full text-center">
+                <p class="text-3xl font-semibold">Coding</p>
+            </div>
+            <div class="border-2 border-gray-500 bg-gray-900 text-blue-50 p-8 rounded-2xl w-full text-center">
+                <p class="text-3xl font-semibold">Business</p>
+            </div>
+            <div class="border-2 border-gray-500 bg-gray-900 text-blue-50 p-8 rounded-2xl w-full text-center">
+                <p class="text-3xl font-semibold">Marketing</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-border bg-gray-100 p-5">
+        <div class="flex items-center pt-20 p-5">
+            <h2 class="text-3xl pt-5">Featured Categories</h2>
+        </div>
+        <div class="cards p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+                <div class="bg-white border rounded-2xl shadow-sm p-5 hover:shadow-lg hover:-translate-y-2 transition">
+                    <p class="bg-purple-500 text-white text-center py-1 rounded-full w-32 text-sm font-medium">Category</p>
+                    <h2 class="text-xl font-bold mt-4 text-gray-800">Professional Product Description Generator</h2>
+                    <p style="font-size: 20px;" class="text-gray-600">Create compelling product descriptions that convert visitors into customers with SEO-optimized content...</p>
+                </div>
+            </div>
+            <div class="button flex justify-center items-center">
+                <a href="{% url 'explore' %}" class="bg-gray-900 text-2xl mt-20 text-gray-100 p-5 text-center hover:shadow-xl/20 hover:-translate-y-2 rounded-[15px] inline-block">Explore More Prompts</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
